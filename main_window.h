@@ -38,7 +38,7 @@ private:
         DarkWall = '=',
         Air      = ' '
     };
-
+    QPushButton* createButton(const QIcon &icon, TileType tileType, QHBoxLayout* layout);
     TileType selectedTile;
     QStack<TileAction> undoStack;
 
@@ -48,7 +48,7 @@ private:
     QGraphicsGridLayout *level;
     */
 
-    QPushButton* createButton(const QIcon &icon, std::function<void()> action);
+    QTableWidget* level = nullptr;
 };
 
 #endif // MAIN_WINDOW_H

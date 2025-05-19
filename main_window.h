@@ -16,15 +16,17 @@ private:
     void selectTile(char tile);
     void onTileClicked(int row, int col);
     void undoTilePlacement();
-
+    void importFromFile();
     void clearLevel();
     void resizeLevel();
 
     void exportToFile();
 
-    struct TileAction
-    {
-        // TODO
+    struct TileAction {
+        int row;
+        int col;
+        char previousTile;
+        char newTile;
     };
 
     enum class TileType
@@ -47,7 +49,7 @@ private:
             OR
     QGraphicsGridLayout *level;
     */
-
+    bool eraseMode;
     QTableWidget* level = nullptr;
 };
 

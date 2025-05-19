@@ -2,7 +2,8 @@
 
 #include <iostream>
 #include <sstream>
-
+#include <vector>
+#include <QString>
 void encrypt(int rows, int columns, const char *data, QString &output)
 {
     std::ostringstream result;
